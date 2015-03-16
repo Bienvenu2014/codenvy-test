@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 public class QNameParserTest {
 
     @Test(enabled = false)
-    public void shouldGetName() throws IllegalNameException {
+    public void shouldGetLocalName() throws IllegalNameException {
         // given
         QNameParser qNameParser = new QNameParser();
 
@@ -15,7 +15,7 @@ public class QNameParserTest {
         QName qName = qNameParser.parse("name");
 
         // then
-        assertEquals(qName.getName(), "name");
+        assertEquals(qName.getLocalName(), "name");
     }
 
     @Test(enabled = true)
